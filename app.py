@@ -23,6 +23,10 @@ def get_note(id):
 
     return jsonify({"error": "Note not found"}), 404
 
+@app.route("/health")
+def health():
+    return {"status": "healthy"}
+
 @app.route("/notes", methods=["POST"])
 def add_note():
     data = request.get_json()

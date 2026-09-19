@@ -10,6 +10,11 @@ def test_get_notes():
     response = client.get("/notes")
     assert response.status_code == 200
 
+def test_health():
+    client = app.test_client()
+    response = client.get("/health")
+    assert response.status_code == 200
+
 def test_add_note():
     client = app.test_client()
 
