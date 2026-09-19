@@ -9,7 +9,7 @@ notes = [
 
 @app.route("/")
 def home():
-    return "Cybersecurity Notes API"
+    return "Cybersecurity Notes API v2"
 
 @app.route("/notes", methods=["GET"])
 def get_notes():
